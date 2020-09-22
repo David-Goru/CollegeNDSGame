@@ -1,24 +1,24 @@
 
-//{{BLOCK(gameOver)
+//{{BLOCK(portada)
 
 //======================================================================
 //
-//	gameOver, 256x192@16, 
+//	portada, 256x198@16, 
 //	+ bitmap not compressed
-//	Total size: 98304 = 98304
+//	Total size: 101376 = 101376
 //
-//	Time-stamp: 2018-12-11, 13:26:57
+//	Time-stamp: 2018-12-11, 10:10:48
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.15
 //	( http://www.coranac.com/projects/#grit )
 //
 //======================================================================
 
-#ifndef GRIT_GAMEOVER_H
-#define GRIT_GAMEOVER_H
+#ifndef GRIT_PORTADA_H
+#define GRIT_PORTADA_H
 
-#define gameOverBitmapLen 98304
-extern const unsigned int gameOverBitmap[24576];
+#define portadaBitmapLen 101376
+extern const unsigned int portadaBitmap[25344];
 
-#endif // GRIT_GAMEOVER_H
+#endif // GRIT_PORTADA_H
 
-//}}BLOCK(gameOver)
+//}}BLOCK(portada)

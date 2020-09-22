@@ -1,7 +1,6 @@
 #include <nds.h>
 #include <stdio.h>
-#include "portada_1.h"
-#include "portada_2.h"
+#include "portada.h"
 #include "gameOver.h"
 #include "win.h"
 
@@ -447,19 +446,14 @@ u8 claro[64] =
 u16 mapDataMapa[768] =
 {
 	4,3,3,3,3,3,3,3, 3,3,3,3,3,3,3,3,  3,3,3,3,3,3,3,3, 3,3,3,3,3,3,3,5,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,16,17,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,18,19,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,8,9,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
 
+	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,1,1,1,1,1,1,1, 1,10,11,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,20,21,1,1,1,1,2,
+	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,22,23,1,1,1,1,2,
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,10,11,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,8,9,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,10,11,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,8,9, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
 
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
@@ -467,13 +461,18 @@ u16 mapDataMapa[768] =
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
 
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,8,9,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,1,1,24,25,1,1,1, 1,1,1,8,9,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,1,1,26,27,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,1,1,8,9,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,8,9,2,
+
+	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
 
 	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
-	2,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,10,11,1,1, 1,1,1,1,1,1,1,2,
-	2,1,10,11,1,1,1,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,2,
+	2,1,1,1,1,32,33,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,10,11,28,29,1,1,2,
+	2,1,1,1,1,34,35,1, 1,1,1,1,1,1,1,1,  1,1,1,1,1,1,1,1, 1,1,1,30,31,1,1,2,
 	6,3,3,3,3,3,3,3, 3,3,3,3,3,3,3,3,  3,3,3,3,3,3,3,3, 3,3,3,3,3,3,3,7
 };
 
@@ -485,26 +484,33 @@ void BorrarPantallaSuperior();
 void ConstruirMapaInferior();
 void ModoFramebuffer();
 void ModoTeselas();
+void ColocarNPCs();
+void ColocarObjetos();
+void MoverTimmy();
 
 // Declaración variables
 static u8*  tileMemory;
 static u16* mapMemory;
+static u16* mapMemoryInvisible;
 int estado_juego;
 int imagenActual; // 0 = portada, 1 = win, 2 = gameOver
+int timmy_col;
+int timmy_fil;
+double closed_interval_rand(double x0, double x1);
+bool annie_encontrada;
+bool johnny_encontrado;
+bool alex_encontrada;
+bool lisa_encontrada;
+bool jackie_encontrado;
 
 int main( void )
 {
 	imagenActual = 0;
 
 	// Iniciamos el juego
-	//ModoTeselas();
 	ModoFramebuffer();
 
 	REG_DISPCNT = MODE_FB0;
-
-	// Colocamos el texto en la parte superior
-	consoleDemoInit();
-	iprintf("\x1b[12;5HPulsa A para empezar");
 
 	// Establecemos variables básicas
 	estado_juego = 0; // 0 para principio, 1 para jugando, 2 para derrota/victoria
@@ -514,15 +520,18 @@ int main( void )
 
 	while(1)
 	{
+		if (estado_juego == 1 && annie_encontrada && johnny_encontrado && lisa_encontrada && alex_encontrada && jackie_encontrado)
+		{
+			estado_juego = 2;
+			imagenActual = 2;
+		}
 		if (imagenActual == 1)
 		{
-			iprintf("\x1b[12;5H¡Has ganado! Pulsa A para repetir");
 			REG_DISPCNT = MODE_FB1 ;
 			ModoFramebuffer();
 		}
 		else if (imagenActual == 2)
 		{
-			iprintf("\x1b[12;5H¡Has perdido :(! Pulsa A para repetir");
 			REG_DISPCNT = MODE_FB2 ;
 			ModoFramebuffer();
 		}
@@ -536,20 +545,20 @@ void ModoFramebuffer()
 	REG_POWERCNT = POWER_LCD | POWER_2D_A ;
 
 	VRAM_A_CR = VRAM_ENABLE | VRAM_A_LCD ;
-	dmaCopy (portada_1Bitmap, VRAM_A , 256*192*2) ; // Portada 1 = FB0
+	dmaCopy (portadaBitmap, VRAM_A , 256*192*2) ; // Portada 1 = FB0
 
 	VRAM_B_CR = VRAM_ENABLE | VRAM_B_LCD ;
-	dmaCopy (portada_2Bitmap, VRAM_B , 256*192*2) ; // Portada 2 = FB1
+	dmaCopy (gameOverBitmap , VRAM_B , 256*192*2) ; // GameOver = FB1
 
 	VRAM_C_CR = VRAM_ENABLE | VRAM_C_LCD ;
 	dmaCopy (winBitmap, VRAM_C , 256*192*2) ; // Win = FB2
-
-	VRAM_D_CR = VRAM_ENABLE | VRAM_D_LCD ;
-	dmaCopy (gameOverBitmap , VRAM_D , 256*192*2) ; // GameOver = FB3
 }
 
 void ModoTeselas()
 {
+	// Para que la generación de los npcs sea totalmente aleatorio
+	srand (time(NULL));
+
 	// Inicialización del motor de gráficos
 	REG_POWERCNT = POWER_ALL_2D;
 	REG_DISPCNT  = MODE_0_2D | DISPLAY_BG0_ACTIVE ;
@@ -557,6 +566,9 @@ void ModoTeselas()
 	BGCTRL [0]   = BG_32x32 | BG_COLOR_256 | BG_MAP_BASE(0) | BG_TILE_BASE(1);
 
 	tileMemory = (u8*)  BG_TILE_RAM(1);
+
+	mapMemoryInvisible  = (u16*) BG_MAP_RAM(0);
+
 	mapMemory  = (u16*) BG_MAP_RAM(0);
 
 	// Inicializamos colores
@@ -614,11 +626,24 @@ void ModoTeselas()
 void InicializarPartida()
 {
 	estado_juego = 1;
+	timmy_col = 15;
+	timmy_fil = 11;
+	annie_encontrada = false;
+	johnny_encontrado = false;
+	alex_encontrada = false;
+	lisa_encontrada = false;
+	jackie_encontrado = false;
+	consoleDemoInit();
 	BorrarPantallaSuperior();
 	ModoTeselas();
 	ConstruirMapaInferior();
-	iprintf("\x1b[12;5HJugando");
 }
+
+double closed_interval_rand(double x0, double x1)
+{ 
+	return x0 + (x1 - x0) * rand() / ((double) RAND_MAX);
+}
+
 
 void ConfigurarInterrupciones()
 {
@@ -634,6 +659,13 @@ void DetectarBotones()
 	{
 		if (REG_KEYINPUT == 0x3FE) InicializarPartida();
 	}
+	else if (estado_juego == 1)
+	{
+		if (REG_KEYINPUT == 0x3EF) MoverTimmy(0);
+		else if (REG_KEYINPUT == 0x3DF) MoverTimmy(1);
+		else if (REG_KEYINPUT == 0x3BF) MoverTimmy(2);
+		else if (REG_KEYINPUT == 0x37F) MoverTimmy(3);
+	}
 }
 
 void BorrarPantallaSuperior()
@@ -641,19 +673,390 @@ void BorrarPantallaSuperior()
 	int i;
 	for (i=0;i<24;i++)
 		iprintf("\x1b[%d;1H                                ",i);
+
+	int contador = 5;
+	if (!annie_encontrada)
+	{
+		iprintf("\x1b[%d;2HEncuentra a Annie",contador);
+		contador += 3;
+	}
+	if (!johnny_encontrado)
+	{
+		iprintf("\x1b[%d;2HEncuentra a Johnny",contador);
+		contador += 3;
+	}
+	if (!alex_encontrada)
+	{
+		iprintf("\x1b[%d;2HEncuentra a Alex",contador);
+		contador += 3;
+	}
+	if (!lisa_encontrada)
+	{
+		iprintf("\x1b[%d;2HEncuentra a Lisa",contador);
+		contador += 3;
+	}
+	if (!jackie_encontrado) iprintf("\x1b[%d;2HEncuentra a Jackie",contador);
 }
 
 void ConstruirMapaInferior()
 {
 	int fila,columna,pos_mapMemory,pos_mapData;
 	pos_mapData = 0;
+
 	for(fila=0;fila<24;fila++)
 	{
 		for(columna=0;columna<32;columna++)
 		{
 			pos_mapMemory            = fila*32+columna;
-			mapMemory[pos_mapMemory] = mapDataMapa[pos_mapData];
+			mapMemory[pos_mapMemory] = 36;
 			pos_mapData ++;
+		}
+	}
+
+	// Mostramos lo visible
+	mapMemory[11*32+13] = 1;
+	mapMemory[11*32+14] = 1;
+	mapMemory[12*32+13] = 1;
+	mapMemory[12*32+14] = 1;
+
+	mapMemory[11*32+17] = 1;
+	mapMemory[11*32+18] = 1;
+	mapMemory[12*32+17] = 1;
+	mapMemory[12*32+18] = 1;
+
+	mapMemory[9*32+15] = 1;
+	mapMemory[9*32+16] = 1;
+	mapMemory[10*32+15] = 1;
+	mapMemory[10*32+16] = 1;
+
+	mapMemory[13*32+15] = 1;
+	mapMemory[13*32+16] = 1;
+	mapMemory[14*32+15] = 1;
+	mapMemory[14*32+16] = 1;
+
+	mapMemory[11*32+15] = 12;
+	mapMemory[11*32+16] = 13;
+	mapMemory[12*32+15] = 14;
+	mapMemory[12*32+16] = 15;
+}
+
+void MoverTimmy(int dir)
+{
+	if (dir == 0 && timmy_col < 30 && mapMemory[timmy_fil*32+timmy_col+2] == 1)
+	{
+		timmy_col += 2;
+		// Actualizamos a Timmy
+		mapMemory[timmy_fil*32+timmy_col] = 12;
+		mapMemory[timmy_fil*32+timmy_col+1] = 13;
+		mapMemory[(timmy_fil+1)*32+timmy_col] = 14;
+		mapMemory[(timmy_fil+1)*32+timmy_col+1] = 15;
+
+		// Actualizamos el mapa
+		mapMemory[timmy_fil*32+timmy_col+2] = mapDataMapa[timmy_fil*32+timmy_col+2];
+		mapMemory[(timmy_fil+1)*32+timmy_col+2] = mapDataMapa[(timmy_fil+1)*32+timmy_col+2];
+		if (mapDataMapa[timmy_fil*32+timmy_col+2] != 2)
+		{
+			mapMemory[timmy_fil*32+timmy_col+3] = mapDataMapa[timmy_fil*32+timmy_col+3];
+			mapMemory[(timmy_fil+1)*32+timmy_col+3] = mapDataMapa[(timmy_fil+1)*32+timmy_col+3];
+		}
+
+		mapMemory[(timmy_fil-2)*32+timmy_col] = mapDataMapa[(timmy_fil-2)*32+timmy_col];
+		mapMemory[(timmy_fil-2)*32+timmy_col+1] = mapDataMapa[(timmy_fil-2)*32+timmy_col+1];
+		mapMemory[(timmy_fil-1)*32+timmy_col] = mapDataMapa[(timmy_fil-1)*32+timmy_col];
+		mapMemory[(timmy_fil-1)*32+timmy_col+1] = mapDataMapa[(timmy_fil-1)*32+timmy_col+1];
+
+		mapMemory[(timmy_fil+2)*32+timmy_col] = mapDataMapa[(timmy_fil+2)*32+timmy_col];
+		mapMemory[(timmy_fil+2)*32+timmy_col+1] = mapDataMapa[(timmy_fil+2)*32+timmy_col+1];
+		mapMemory[(timmy_fil+3)*32+timmy_col] = mapDataMapa[(timmy_fil+3)*32+timmy_col];
+		mapMemory[(timmy_fil+3)*32+timmy_col+1] = mapDataMapa[(timmy_fil+3)*32+timmy_col+1];
+
+		// Colocamos la tierra en la posición de Timmy anterior
+		mapMemory[timmy_fil*32+timmy_col-2] = 1;
+		mapMemory[timmy_fil*32+timmy_col-1] = 1;
+		mapMemory[(timmy_fil+1)*32+timmy_col-2] = 1;
+		mapMemory[(timmy_fil+1)*32+timmy_col-1] = 1;
+
+		// Ocultamos el mapa
+		mapMemory[timmy_fil*32+timmy_col-4] = 36;
+		mapMemory[timmy_fil*32+timmy_col-3] = 36;
+		mapMemory[(timmy_fil+1)*32+timmy_col-4] = 36;
+		mapMemory[(timmy_fil+1)*32+timmy_col-3] = 36;
+
+		mapMemory[(timmy_fil-2)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil-2)*32+timmy_col-2] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col-2] = 36;
+
+		mapMemory[(timmy_fil+2)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil+2)*32+timmy_col-2] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col-2] = 36;
+
+		// Comprobar si se ha encontrado a alguien
+		if (mapMemory[timmy_fil*32+timmy_col+2] == 16 || mapMemory[(timmy_fil-2)*32+timmy_col] == 16 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 16)
+		{	
+			annie_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col+2] == 20 || mapMemory[(timmy_fil-2)*32+timmy_col] == 20 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 20)
+		{
+			johnny_encontrado = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col+2] == 24 || mapMemory[(timmy_fil-2)*32+timmy_col] == 24 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 24)
+		{
+			lisa_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col+2] == 28 || mapMemory[(timmy_fil-2)*32+timmy_col] == 28 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 28)
+		{
+			alex_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col+2] == 32 || mapMemory[(timmy_fil-2)*32+timmy_col] == 32 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 32)
+		{
+			jackie_encontrado = true;
+			BorrarPantallaSuperior();
+		}
+	}
+	else if (dir == 1 && timmy_col > 0 && mapMemory[timmy_fil*32+timmy_col-2] == 1)
+	{
+		timmy_col -= 2;
+		// Actualizamos a Timmy
+		mapMemory[timmy_fil*32+timmy_col] = 12;
+		mapMemory[timmy_fil*32+timmy_col+1] = 13;
+		mapMemory[(timmy_fil+1)*32+timmy_col] = 14;
+		mapMemory[(timmy_fil+1)*32+timmy_col+1] = 15;
+
+		// Actualizamos el mapa
+		mapMemory[timmy_fil*32+timmy_col-1] = mapDataMapa[timmy_fil*32+timmy_col-1];
+		mapMemory[(timmy_fil+1)*32+timmy_col-1] = mapDataMapa[(timmy_fil+1)*32+timmy_col-1];
+		if (mapDataMapa[timmy_fil*32+timmy_col-1] != 2)
+		{
+			mapMemory[timmy_fil*32+timmy_col-2] = mapDataMapa[timmy_fil*32+timmy_col-2];
+			mapMemory[(timmy_fil+1)*32+timmy_col-2] = mapDataMapa[(timmy_fil+1)*32+timmy_col-2];
+		}
+
+		mapMemory[(timmy_fil-2)*32+timmy_col] = mapDataMapa[(timmy_fil-2)*32+timmy_col];
+		mapMemory[(timmy_fil-2)*32+timmy_col+1] = mapDataMapa[(timmy_fil-2)*32+timmy_col+1];
+		mapMemory[(timmy_fil-1)*32+timmy_col] = mapDataMapa[(timmy_fil-1)*32+timmy_col];
+		mapMemory[(timmy_fil-1)*32+timmy_col+1] = mapDataMapa[(timmy_fil-1)*32+timmy_col+1];
+
+		mapMemory[(timmy_fil+2)*32+timmy_col] = mapDataMapa[(timmy_fil+2)*32+timmy_col];
+		mapMemory[(timmy_fil+2)*32+timmy_col+1] = mapDataMapa[(timmy_fil+2)*32+timmy_col+1];
+		mapMemory[(timmy_fil+3)*32+timmy_col] = mapDataMapa[(timmy_fil+3)*32+timmy_col];
+		mapMemory[(timmy_fil+3)*32+timmy_col+1] = mapDataMapa[(timmy_fil+3)*32+timmy_col+1];
+
+		// Colocamos la tierra en la posición de Timmy anterior
+		mapMemory[timmy_fil*32+timmy_col+3] = 1;
+		mapMemory[timmy_fil*32+timmy_col+2] = 1;
+		mapMemory[(timmy_fil+1)*32+timmy_col+3] = 1;
+		mapMemory[(timmy_fil+1)*32+timmy_col+2] = 1;
+
+		// Ocultamos el mapa
+		mapMemory[timmy_fil*32+timmy_col+4] = 36;
+		mapMemory[timmy_fil*32+timmy_col+5] = 36;
+		mapMemory[(timmy_fil+1)*32+timmy_col+4] = 36;
+		mapMemory[(timmy_fil+1)*32+timmy_col+5] = 36;
+
+		mapMemory[(timmy_fil-2)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil-2)*32+timmy_col+3] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col+3] = 36;
+
+		mapMemory[(timmy_fil+2)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil+2)*32+timmy_col+3] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col+3] = 36;
+
+		// Comprobar si se ha encontrado a alguien
+		if (mapMemory[timmy_fil*32+timmy_col-2] == 16 || mapMemory[(timmy_fil-2)*32+timmy_col] == 16 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 16)
+		{	
+			annie_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col-2] == 20 || mapMemory[(timmy_fil-2)*32+timmy_col] == 20 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 20)
+		{
+			johnny_encontrado = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col-2] == 24 || mapMemory[(timmy_fil-2)*32+timmy_col] == 24 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 24)
+		{
+			lisa_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col-2] == 28 || mapMemory[(timmy_fil-2)*32+timmy_col] == 28 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 28)
+		{
+			alex_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[timmy_fil*32+timmy_col-2] == 32 || mapMemory[(timmy_fil-2)*32+timmy_col] == 32 || mapMemory[(timmy_fil + 2)*32+timmy_col] == 32)
+		{
+			jackie_encontrado = true;
+			BorrarPantallaSuperior();
+		}
+	}
+	else if (dir == 2 && timmy_fil > 0 && mapMemory[(timmy_fil-2)*32+timmy_col] == 1)
+	{
+		timmy_fil -= 2;
+		// Actualizamos a Timmy
+		mapMemory[timmy_fil*32+timmy_col] = 12;
+		mapMemory[timmy_fil*32+timmy_col+1] = 13;
+		mapMemory[(timmy_fil+1)*32+timmy_col] = 14;
+		mapMemory[(timmy_fil+1)*32+timmy_col+1] = 15;
+
+		// Actualizamos el mapa
+		mapMemory[(timmy_fil-1)*32+timmy_col] = mapDataMapa[(timmy_fil-1)*32+timmy_col];
+		mapMemory[(timmy_fil-1)*32+timmy_col+1] = mapDataMapa[(timmy_fil-1)*32+timmy_col+1];
+		mapMemory[(timmy_fil-2)*32+timmy_col] = mapDataMapa[(timmy_fil-2)*32+timmy_col];
+		mapMemory[(timmy_fil-2)*32+timmy_col+1] = mapDataMapa[(timmy_fil-2)*32+timmy_col+1];
+
+		mapMemory[(timmy_fil)*32+timmy_col-1] = mapDataMapa[(timmy_fil)*32+timmy_col-1];
+		mapMemory[(timmy_fil+1)*32+timmy_col-1] = mapDataMapa[(timmy_fil+1)*32+timmy_col-1];
+		if (mapDataMapa[timmy_fil*32+timmy_col-1] != 2)
+		{
+		mapMemory[(timmy_fil)*32+timmy_col-2] = mapDataMapa[(timmy_fil)*32+timmy_col-2];
+		mapMemory[(timmy_fil+1)*32+timmy_col-2] = mapDataMapa[(timmy_fil+1)*32+timmy_col-2];
+		}
+
+		mapMemory[(timmy_fil)*32+timmy_col+2] = mapDataMapa[(timmy_fil)*32+timmy_col+2];
+		mapMemory[(timmy_fil+1)*32+timmy_col+2] = mapDataMapa[(timmy_fil+1)*32+timmy_col+2];
+		if (mapDataMapa[(timmy_fil+1)*32+timmy_col+2] != 2)
+		{
+		mapMemory[(timmy_fil)*32+timmy_col+3] = mapDataMapa[(timmy_fil)*32+timmy_col+3];
+		mapMemory[(timmy_fil+1)*32+timmy_col+3] = mapDataMapa[(timmy_fil+1)*32+timmy_col+3];
+		}
+
+		// Colocamos la tierra en la posición de Timmy anterior
+		mapMemory[(timmy_fil+3)*32+timmy_col] = 1;
+		mapMemory[(timmy_fil+3)*32+timmy_col+1] = 1;
+		mapMemory[(timmy_fil+2)*32+timmy_col] = 1;
+		mapMemory[(timmy_fil+2)*32+timmy_col+1] = 1;
+
+		// Ocultamos el mapa
+		mapMemory[(timmy_fil+4)*32+timmy_col] = 36;
+		mapMemory[(timmy_fil+4)*32+timmy_col+1] = 36;
+		mapMemory[(timmy_fil+5)*32+timmy_col] = 36;
+		mapMemory[(timmy_fil+5)*32+timmy_col+1] = 36;
+
+		mapMemory[(timmy_fil+2)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil+2)*32+timmy_col+3] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col+3] = 36;
+
+		mapMemory[(timmy_fil+2)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil+2)*32+timmy_col-2] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil+3)*32+timmy_col-2] = 36;
+
+		// Comprobar si se ha encontrado a alguien
+		if (mapMemory[(timmy_fil-2)*32+timmy_col] == 16 || mapMemory[timmy_fil*32+timmy_col+2] == 16 || mapMemory[timmy_fil*32+timmy_col-2] == 16)
+		{	
+			annie_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil-2)*32+timmy_col] == 20 || mapMemory[timmy_fil*32+timmy_col+2] == 20 || mapMemory[timmy_fil*32+timmy_col-2] == 20)
+		{
+			johnny_encontrado = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil-2)*32+timmy_col] == 24 || mapMemory[timmy_fil*32+timmy_col+2] == 24 || mapMemory[timmy_fil*32+timmy_col-2] == 24)
+		{
+			lisa_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil-2)*32+timmy_col] == 28 || mapMemory[timmy_fil*32+timmy_col+2] == 28 || mapMemory[timmy_fil*32+timmy_col-2] == 28)
+		{
+			alex_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil-2)*32+timmy_col] == 32 || mapMemory[timmy_fil*32+timmy_col+2] == 32 || mapMemory[timmy_fil*32+timmy_col-2] == 32)
+		{
+			jackie_encontrado = true;
+			BorrarPantallaSuperior();
+		}
+	}
+	else if (dir == 3 && timmy_fil < 22 && mapMemory[(timmy_fil+2)*32+timmy_col] == 1)
+	{
+		timmy_fil += 2;
+		// Actualizamos a Timmy
+		mapMemory[timmy_fil*32+timmy_col] = 12;
+		mapMemory[timmy_fil*32+timmy_col+1] = 13;
+		mapMemory[(timmy_fil+1)*32+timmy_col] = 14;
+		mapMemory[(timmy_fil+1)*32+timmy_col+1] = 15;
+
+		// Actualizamos el mapa
+		mapMemory[(timmy_fil+2)*32+timmy_col] = mapDataMapa[(timmy_fil+2)*32+timmy_col];
+		mapMemory[(timmy_fil+2)*32+timmy_col+1] = mapDataMapa[(timmy_fil+2)*32+timmy_col+1];
+		if (mapDataMapa[(timmy_fil+2)*32+timmy_col] != 3)
+		{
+			mapMemory[(timmy_fil+3)*32+timmy_col] = mapDataMapa[(timmy_fil+3)*32+timmy_col];
+			mapMemory[(timmy_fil+3)*32+timmy_col+1] = mapDataMapa[(timmy_fil+3)*32+timmy_col+1];
+		}
+
+		mapMemory[(timmy_fil)*32+timmy_col-1] = mapDataMapa[(timmy_fil)*32+timmy_col-1];
+		mapMemory[(timmy_fil+1)*32+timmy_col-1] = mapDataMapa[(timmy_fil+1)*32+timmy_col-1];
+		if (mapDataMapa[timmy_fil*32+timmy_col-1] != 2)
+		{
+		mapMemory[(timmy_fil)*32+timmy_col-2] = mapDataMapa[(timmy_fil)*32+timmy_col-2];
+		mapMemory[(timmy_fil+1)*32+timmy_col-2] = mapDataMapa[(timmy_fil+1)*32+timmy_col-2];
+		}
+
+		mapMemory[(timmy_fil)*32+timmy_col+2] = mapDataMapa[(timmy_fil)*32+timmy_col+2];
+		mapMemory[(timmy_fil+1)*32+timmy_col+2] = mapDataMapa[(timmy_fil+1)*32+timmy_col+2];
+		if (mapDataMapa[(timmy_fil+1)*32+timmy_col+2] != 2)
+		{
+		mapMemory[(timmy_fil)*32+timmy_col+3] = mapDataMapa[(timmy_fil)*32+timmy_col+3];
+		mapMemory[(timmy_fil+1)*32+timmy_col+3] = mapDataMapa[(timmy_fil+1)*32+timmy_col+3];
+		}
+
+		// Colocamos la tierra en la posición de Timmy anterior
+		mapMemory[(timmy_fil-1)*32+timmy_col] = 1;
+		mapMemory[(timmy_fil-1)*32+timmy_col+1] = 1;
+		mapMemory[(timmy_fil-2)*32+timmy_col] = 1;
+		mapMemory[(timmy_fil-2)*32+timmy_col+1] = 1;
+
+		// Ocultamos el mapa
+		mapMemory[(timmy_fil-3)*32+timmy_col] = 36;
+		mapMemory[(timmy_fil-3)*32+timmy_col+1] = 36;
+		mapMemory[(timmy_fil-4)*32+timmy_col] = 36;
+		mapMemory[(timmy_fil-4)*32+timmy_col+1] = 36;
+
+		mapMemory[(timmy_fil-2)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil-2)*32+timmy_col+3] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col+2] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col+3] = 36;
+
+		mapMemory[(timmy_fil-2)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil-2)*32+timmy_col-2] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col-1] = 36;
+		mapMemory[(timmy_fil-1)*32+timmy_col-2] = 36;
+
+		// Comprobar si se ha encontrado a alguien
+		if (mapMemory[(timmy_fil+2)*32+timmy_col] == 16 || mapMemory[timmy_fil*32+timmy_col+2] == 16 || mapMemory[timmy_fil*32+timmy_col-2] == 16)
+		{	
+			annie_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil+2)*32+timmy_col] == 20 || mapMemory[timmy_fil*32+timmy_col+2] == 20 || mapMemory[timmy_fil*32+timmy_col-2] == 20)
+		{
+			johnny_encontrado = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil+2)*32+timmy_col] == 24 || mapMemory[timmy_fil*32+timmy_col+2] == 24 || mapMemory[timmy_fil*32+timmy_col-2] == 24)
+		{
+			lisa_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil+2)*32+timmy_col] == 28 || mapMemory[timmy_fil*32+timmy_col+2] == 28 || mapMemory[timmy_fil*32+timmy_col-2] == 28)
+		{
+			alex_encontrada = true;
+			BorrarPantallaSuperior();
+		}
+		if (mapMemory[(timmy_fil+2)*32+timmy_col] == 32 || mapMemory[timmy_fil*32+timmy_col+2] == 32 || mapMemory[timmy_fil*32+timmy_col-2] == 32)
+		{
+			jackie_encontrado = true;
+			BorrarPantallaSuperior();
 		}
 	}
 }
